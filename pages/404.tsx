@@ -11,7 +11,7 @@ export default function First() {
     setTimeout( () => {
       rout.push("/");
     }, 3000);
-  }, [])
+  }, [rout]);
 
   return (
     <div className={styles.wrapper}>

@@ -35,7 +35,7 @@ const Home: React.FC<HomeProps> = ( { listSocials } ) => {
       <div style={{display: "flex", gap: "1rem"}}>
       { listSocials && listSocials.map( (socialElement: IDataAPI ) => {
         return (
-          <span key={socialElement.id}><a href={socialElement.path} target="_blank"><i className={`fab fa-${socialElement.icon}`} aria-hidden="true"/></a></span>
+          <span key={socialElement.id}><a href={socialElement.path} target="_blank" rel="noreferrer"><i className={`fab fa-${socialElement.icon}`} aria-hidden="true"/></a></span>
         )
       })}
       </div>
