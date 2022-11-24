@@ -56,7 +56,7 @@ type TodoListProps = {
 const TodoList: React.FC<TodoListProps> = ( { listUser } ) => { 
   return (
     <div className={styles.wrapper}>
-      <Heading title="List of Users" />
+      <Heading title="List of Users (SSR)" />
       <ul>
       { listUser && listUser.map( (user: IResponseUser)  => {
         return (

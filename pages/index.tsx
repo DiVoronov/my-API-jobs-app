@@ -24,10 +24,7 @@ type HomeProps = {
 const Home: React.FC<HomeProps> = ( { listSocials } ) => { 
   return (
     <div className={styles.wrapper}>
-      <Head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.css" />
-      </Head>
-      <Heading title="Our Contacts"/>
+      <Heading title="My Contacts"/>
       <div style={{display: "flex", gap: "1rem"}}>
       { listSocials && listSocials.map( (socialElement: IDataAPI ) => {
         return (

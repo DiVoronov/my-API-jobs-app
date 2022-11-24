@@ -34,7 +34,7 @@ type TodoListProps = {
 const TodoList: React.FC<TodoListProps> = ( { listPosts } ) => { 
   return (
     <div className={styles.wrapper}>
-      <Heading title="List of Posts" />
+      <Heading title="List of Posts (SSG)" />
       <ul>
       { listPosts && listPosts.map( (post: IPostProps)  => {
         return (
