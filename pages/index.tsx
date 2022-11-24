@@ -5,16 +5,23 @@ import Head from "next/head";
 
 export const getStaticProps = async () => {
 
-  const response = await fetch(`${process.env.API_HOST}/socials`);
-  const data: IDataAPI[] = await response.json();  
+  try {
+    const response = await fetch(`${process.env.API_HOST}/socials`);
+    const data: IDataAPI[] = await response.json();  
 
-  if (!data) {
-    return { notFound: true }
+    if (!data) {
+      return { notFound: true }
+    }
+
+    return {
+      props: { listSocials: data },
+    };
+  } catch {
+    return {
+      props: { listSocials: null },
+    };
   }
-
-  return {
-    props: { listSocials: data },
-  };
+  
 };
 
 type HomeProps = {
